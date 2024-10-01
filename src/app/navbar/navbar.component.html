@@ -1,0 +1,25 @@
+<nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">MyLogo</div>
+      <div class="toggle-button" (click)="toggleNavbar()">
+        &#9776; <!-- Hamburger icon -->
+      </div>
+      <ul class="navbar-links" [ngClass]="{'show': isNavbarOpen}">
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li class="dropdown" (mouseover)="showDropdown()" (mouseleave)="hideDropdown()">
+          <a href="javascript:void(0)">Services</a>
+          <div class="dropdown-content" [ngClass]="{'show': isDropdownOpen}">
+            <a routerLink="/services/service1">Service 1</a>
+            <a routerLink="/services/service2">Service 2</a>
+            <a routerLink="/services/service3">Service 3</a>
+          </div>
+        </li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+
+  

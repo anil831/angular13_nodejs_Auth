@@ -1,0 +1,11 @@
+<!-- toaster.component.html -->
+<div class="toaster-container">
+    <div *ngFor="let message of messages" 
+         [ngClass]="message.type" 
+         [@slideInOut] 
+         >
+         <span class="icon">{{ getIconSymbol(message.type) }}</span>
+      {{ message.text }}
+    </div>
+  </div>
+  

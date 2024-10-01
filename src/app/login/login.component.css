@@ -1,0 +1,113 @@
+/* Base Styles */
+.login {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Gradient background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.login-form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    border-radius: 12px;
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    transform: scale(1); /* Smooth scaling effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+.login-form-container:hover {
+    transform: scale(1.02); /* Slight scale up on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow for focus state */
+}
+
+.error-message{
+    color: #d9534f;
+    margin-top: 5px;
+    font-size: 0.875rem;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Primary color for the button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transitions for button effects */
+}
+
+button:disabled {
+    background-color: #b0bec5; /* Disabled state styling */
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-form-container {
+        width: 80%;
+        padding: 20px; /* Adjust padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        font-size: 0.875rem; /* Slightly smaller text for very small screens */
+    }
+
+    button {
+        font-size: 0.875rem; /* Adjust button text size */
+    }
+}
+
+
+
